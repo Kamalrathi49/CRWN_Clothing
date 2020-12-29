@@ -1,0 +1,17 @@
+superhero : [
+    {
+      name : "superman",
+      email: "abc@gmail",
+      id : "DC01"
+    },
+    {
+      name: "batman",
+      email: "abc@gmail",
+      id : "DC02"
+    },
+    {
+      name: "ratman",
+      email: "abc@gmail",
+      id : "DC03"
+    }
+  ]
