@@ -8,8 +8,11 @@ import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 import { ReactComponent as Logo } from "../../assests/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
+import { createStructuredSelector } from "reselect";
 
 import "./header.style.scss";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 const altimg = <ion-icon name="person-circle-outline"></ion-icon>;
 const Header = ({ currentUser, hidden }) => (
@@ -47,9 +50,9 @@ const Header = ({ currentUser, hidden }) => (
   </div>
 );
 
-const mapStateToprops = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden,
+const mapStateToprops = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToprops)(Header);
