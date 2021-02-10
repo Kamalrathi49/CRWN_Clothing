@@ -5,10 +5,10 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import ShopPage from "./pages/shopepage/shop.component";
+import HomePage from "./pages/homepage/homepage.component";
+import CheckoutPage from "./pages/checkout/checkout.componenet";
 
 import setCurrentUser from "./redux/user/user.action";
-
-import HomePage from "./pages/homepage/homepage.component";
 import Header from "./component/header/header-component.jsx";
 
 import {
@@ -16,11 +16,13 @@ import {
   Route,
   Redirect,
 } from "react-router-dom/cjs/react-router-dom.min";
+
 import {
   auth,
   createUserProfileDocument,
   signInWithGoogle,
 } from "./firebase/firebase.utils";
+
 import SignInAndSignUp from "./pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page.jsx";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
@@ -63,6 +65,7 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
             }
           />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );
