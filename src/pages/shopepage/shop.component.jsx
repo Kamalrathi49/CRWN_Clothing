@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import collectionsOverview from "../../component/collections-overview/collections-overview.componenet";
-import categoryPage from "../category/category.component";
+import collectionPage from "../collection/collection.component";
 
 
 const ShopPage = ({ match }) =>{ 
@@ -10,7 +10,7 @@ const ShopPage = ({ match }) =>{
    return (
   <div className="shop-page">
     <Route exact path={`${match.path}`} component={collectionsOverview} />
-    <Route path={`${match.path}/:categotyid`} component={categoryPage}/>
+    <Route path={`${match.path}/:collectionid`} component={collectionPage}/>
   </div>
 );
 }
