@@ -1,6 +1,8 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 
+import crwnSvg from "../../assests/crown.svg";
+
 import "./stripe-button.style.scss";
 
 const StripeCheckoutButton = ({ price }) => {
@@ -19,7 +21,7 @@ const StripeCheckoutButton = ({ price }) => {
       name="CRWN Clothing Ltd."
       billingAddress
       shippingAddress
-      image="https://sendeyo.com/up/d/f3eb2117da"
+      image= {crwnSvg}
       description={`Your total is ${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
