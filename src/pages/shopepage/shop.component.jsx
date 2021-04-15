@@ -5,6 +5,7 @@ import collectionsOverview from "../../component/collections-overview/collection
 import collectionPage from "../collection/collection.component";
 
 
+
 const ShopPage = ({ match }) =>{ 
   console.log(match);
    return (

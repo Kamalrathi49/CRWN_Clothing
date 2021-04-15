@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
 
-  .title {
-    margin: 10px 0;
+  @media screen and (max-width: 900px) {
+      width: auto;
   }
+
+  
 
   .sign-in-btn {
     display: flex;

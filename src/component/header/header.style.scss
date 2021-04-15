@@ -4,23 +4,41 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  position:relative;
+
+  @media screen and (max-width: 900px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 14px;
+    padding: 25px;
+
+    @media screen and (max-width: 900px) {
+      width: 50px;
+      padding: 0px;
+    }
   }
 
   .options {
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+      width: 80%;
+    }
 
     .option {
       padding: 10px 15px;
+      @media screen and (max-width: 900px) {
+        padding: 5px 8px;
+      }
     }
 
     .profile-img {

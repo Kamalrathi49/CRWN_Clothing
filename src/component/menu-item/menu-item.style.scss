@@ -1,5 +1,5 @@
 .menu-item {
-  min-width: 150px;
+  min-width: 30%;
   width: 30%;
   height: 240px;
   flex: 1 1 auto;
@@ -66,5 +66,11 @@
       font-weight: lighter;
       font-size: 16px;
     }
+  }
+}
+
+#MT {
+  @media screen and (max-width: 900px) {
+    height: 200px;
   }
 }

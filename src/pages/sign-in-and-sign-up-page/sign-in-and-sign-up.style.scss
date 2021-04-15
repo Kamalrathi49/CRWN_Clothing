@@ -1,12 +1,19 @@
 .sign-in-and-sign-up {
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    margin: 30px auto;
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  margin-top: 10vh;
 
-    .sign-in{
-      margin-right: 100px;
-      margin-bottom: 30px;
-    }
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    justify-content: center;
+    margin: 15px auto;
+    margin-top: 5vh;
+  
   }
   
+  }
+
