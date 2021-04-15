@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -10,6 +9,8 @@ import CheckoutPage from "./pages/checkout/checkout.componenet";
 
 import setCurrentUser from "./redux/user/user.action";
 import Header from "./component/header/header-component.jsx";
+
+import { GlobalStyle } from './global.style';
 
 import {
   Switch,
@@ -55,6 +56,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle/>
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
