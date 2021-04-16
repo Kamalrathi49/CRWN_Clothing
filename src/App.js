@@ -10,7 +10,7 @@ import CheckoutPage from "./pages/checkout/checkout.componenet";
 import setCurrentUser from "./redux/user/user.action";
 import Header from "./component/header/header-component.jsx";
 
-import { GlobalStyle } from "./global.style";
+import { GlobalStyle } from './global.style';
 
 import {
   Switch,
@@ -56,22 +56,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle/>
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route  path="/shop" component={ShopPage} />
           <Route
-            exact
-            path="/signin"
+            path="/sign-in"
             render={() =>
-              this.props.currentUser ? (
-                <Redirect to="/" />
-              ) : (
-                <SignInAndSignUpPage />
-              )
+              this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
             }
           />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );

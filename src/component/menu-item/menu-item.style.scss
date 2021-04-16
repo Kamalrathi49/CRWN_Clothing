@@ -60,6 +60,11 @@
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
+
+      @media screen and (max-width: 900px) {
+        font-size: 18px;
+      }
+
     }
 
     .subtitle {

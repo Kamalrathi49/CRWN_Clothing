@@ -4,12 +4,12 @@
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: auto;
+  padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: "Open Sans Condensed";
+  font-family: 'Open Sans Condensed';
   font-weight: bolder;
   border: none;
   cursor: pointer;
@@ -23,8 +23,13 @@
   }
 
   &.google-sign-in {
-    background-color: black;
-    color: white;
+    background-color: #4285f4;
+    color: #fff;
+
+    &:hover {
+      background-color: #357ae8;
+      border: none;
+    }
   }
 
   &.inverted {
@@ -35,12 +40,8 @@
     &:hover {
       background-color: black;
       color: white;
+      border: none;
     }
   }
-}
 
-.google-sign-in:hover {
-  background-color: white;
-  border: black 1px solid;
-  color: black;
 }
