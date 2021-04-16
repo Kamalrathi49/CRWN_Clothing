@@ -7,16 +7,16 @@ import ReactDOM from "react-dom";
 import { store, persistor } from "./redux/store";
 
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { persistGate } from "redux-persist/integration/react";
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <persistGate persistor={persistor}>
         <App />
       </persistGate>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById("root")
 );
