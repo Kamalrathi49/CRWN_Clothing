@@ -44,9 +44,8 @@ class signUp extends React.Component {
         password: "",
         confirmPassword: "",
       });
-      
     } catch (error) {
-      alert(error);  
+      alert(error);
     }
   };
 
@@ -98,7 +97,7 @@ class signUp extends React.Component {
             lable="Confirm-Password"
             required
           />
-          
+
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
       </div>
